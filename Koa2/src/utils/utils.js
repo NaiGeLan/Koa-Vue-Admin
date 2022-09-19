@@ -7,6 +7,8 @@ const CODE = {
     USER_LOGIN_ERROR: 30001, // 用户未登陆
     BUSINESS_ERROR: 40001, // 业务请求失败
     AUTH_ERROR: 50001, // 认证失败或者TOKEN过期
+    USER_EXIST: 60001, // 用户已存在
+    USER_NOT_EXIST: 60002, // 用户已存在
 }
 module.exports = {
     pager({pageNum=1,pageSize=10}){
@@ -21,17 +23,18 @@ module.exports = {
             skipIndex
         }
     },
-    success(data='',msg='',code=CODE.SUCCESS){
-        log4js.debug(data)
+    success(code=CODE.SUCCESS,msg='',data='',){
+        log4js.info(data)
         return {
-            code,data,msg
+            code,msg,data
         }
     },
-    fail(msg='',code=CODE.BUSINESS_ERROR){
-        log4js.debug(msg)
+    fail(code=CODE.BUSINESS_ERROR,msg='',data=null){
+        log4js.error(msg)
         return {
-            code,
+            code,msg,data
         }
-    }
+    },
+    CODE
 
 }

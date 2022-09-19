@@ -33,6 +33,7 @@ service.interceptors.request.use(config => {
 
 service.interceptors.response.use(res => {
     const code = res.data.code || 200
+    const msg = res.data.msg
      if (code === 500) {
         ElMessage({
           message: msg,

@@ -266,9 +266,9 @@ class UserController {
   async register(ctx, next) {
     // 1. 获取数据
     // console.log(ctx.request.body)
-    const { user_name, password } = ctx.request.body
+    const { username, password } = ctx.request.body
     // 2. 操作数据库
-    const res = await createUser(user_name, password)
+    const res = await createUser(username, password)
     // console.log(res)
     // 3. 返回结果
     ctx.body = ctx.request.body
@@ -290,7 +290,7 @@ service 层主要是做数据库处理
 
 ```js
 class UserService {
-  async createUser(user_name, password) {
+  async createUser(username, password) {
     // todo: 写入数据库
     return '写入数据库成功'
   }
@@ -376,7 +376,7 @@ const seq = require('../db/seq')
 // 创建模型(Model zd_user -> 表 zd_users)
 const User = seq.define('zd_user', {
   // id 会被sequelize自动创建, 管理
-  user_name: {
+  username: {
     type: DataTypes.STRING,
     allowNull: false,
     unique: true,
@@ -411,16 +411,16 @@ module.exports = User
 const User = require('../model/use.model')
 
 class UserService {
-  async createUser(user_name, password) {
+  async createUser(username, password) {
     // 插入数据
     // User.create({
     //   // 表的字段
-    //   user_name: user_name,
+    //   username: username,
     //   password: password
     // })
 
     // await表达式: promise对象的值
-    const res = await User.create({ user_name, password })
+    const res = await User.create({ username, password })
     // console.log(res)
 
     return res.dataValues
@@ -439,9 +439,9 @@ class UserController {
   async register(ctx, next) {
     // 1. 获取数据
     // console.log(ctx.request.body)
-    const { user_name, password } = ctx.request.body
+    const { username, password } = ctx.request.body
     // 2. 操作数据库
-    const res = await createUser(user_name, password)
+    const res = await createUser(username, password)
     // console.log(res)
     // 3. 返回结果
     ctx.body = {
@@ -449,7 +449,7 @@ class UserController {
       message: '用户注册成功',
       result: {
         id: res.id,
-        user_name: res.user_name,
+        username: res.username,
       },
     }
   }
@@ -473,10 +473,10 @@ class UserController {
   async register(ctx, next) {
     // 1. 获取数据
     // console.log(ctx.request.body)
-    const { user_name, password } = ctx.request.body
+    const { username, password } = ctx.request.body
 
     // 合法性
-    if (!user_name || !password) {
+    if (!username || !password) {
       console.error('用户名或密码为空', ctx.request.body)
       ctx.status = 400
       ctx.body = {
@@ -487,7 +487,7 @@ class UserController {
       return
     }
     // 合理性
-    if (getUerInfo({ user_name })) {
+    if (getUerInfo({ username })) {
       ctx.status = 409
       ctx.body = {
         code: '10002',
@@ -497,7 +497,7 @@ class UserController {
       return
     }
     // 2. 操作数据库
-    const res = await createUser(user_name, password)
+    const res = await createUser(username, password)
     // console.log(res)
     // 3. 返回结果
     ctx.body = {
@@ -505,7 +505,7 @@ class UserController {
       message: '用户注册成功',
       result: {
         id: res.id,
-        user_name: res.user_name,
+        username: res.username,
       },
     }
   }
@@ -524,25 +524,25 @@ module.exports = new UserController()
 const User = require('../model/use.model')
 
 class UserService {
-  async createUser(user_name, password) {
+  async createUser(username, password) {
     // 插入数据
     // await表达式: promise对象的值
-    const res = await User.create({ user_name, password })
+    const res = await User.create({ username, password })
     // console.log(res)
 
     return res.dataValues
   }
 
-  async getUerInfo({ id, user_name, password, is_admin }) {
+  async getUerInfo({ id, username, password, is_admin }) {
     const whereOpt = {}
 
     id && Object.assign(whereOpt, { id })
-    user_name && Object.assign(whereOpt, { user_name })
+    username && Object.assign(whereOpt, { username })
     password && Object.assign(whereOpt, { password })
     is_admin && Object.assign(whereOpt, { is_admin })
 
     const res = await User.findOne({
-      attributes: ['id', 'user_name', 'password', 'is_admin'],
+      attributes: ['id', 'username', 'password', 'is_admin'],
       where: whereOpt,
     })
 
@@ -568,9 +568,9 @@ const { getUerInfo } = require('../service/user.service')
 const { userFormateError, userAlreadyExited } = require('../constant/err.type')
 
 const userValidator = async (ctx, next) => {
-  const { user_name, password } = ctx.request.body
+  const { username, password } = ctx.request.body
   // 合法性
-  if (!user_name || !password) {
+  if (!username || !password) {
     console.error('用户名或密码为空', ctx.request.body)
     ctx.app.emit('error', userFormateError, ctx)
     return
@@ -580,9 +580,9 @@ const userValidator = async (ctx, next) => {
 }
 
 const verifyUser = async (ctx, next) => {
-  const { user_name } = ctx.request.body
+  const { username } = ctx.request.body
 
-  if (getUerInfo({ user_name })) {
+  if (getUerInfo({ username })) {
     ctx.app.emit('error', userAlreadyExited, ctx)
     return
   }

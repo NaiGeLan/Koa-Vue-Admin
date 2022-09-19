@@ -1,15 +1,18 @@
 
 <script lang="ts" setup>
   import { reactive } from 'vue'
-  import {login} from "../api/login.api.js";
+  // import {login} from "../api/login.js";
+  import useUserStore from '../store/modules/user';
+  const userStore = useUserStore()
   const form = reactive({
     username:'',
     password:'',
   })
   
   const onSubmit = async () => {
-    const res = await login(form)
-    console.log(res)
+      userStore.login(form)
+    // const res = await login(form)
+    // console.log(res)
   }
   const rules = reactive({
     username: [
