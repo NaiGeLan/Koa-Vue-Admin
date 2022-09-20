@@ -2,12 +2,13 @@ import { loginApi, getInfoApi } from '../../api/user.js'
 import { getToken, setToken, removeToken } from '../../utils/auth'
 // import storage from '../../utils/storage'
 import { defineStore } from 'pinia'
+import storage from "../../utils/storage.js";
 const useUserStore = defineStore(
   'user',
   {
     state: () => ({
       token: getToken(),
-      username: '',
+      username: storage.getItem('username'),
       roles: [],
       deptId: [],
       roleList: []
@@ -19,9 +20,11 @@ const useUserStore = defineStore(
         // console.log(username,password,"@@@@@@@@")
         return new Promise((resolve, reject) => {
             loginApi(username, password).then(res => {
-            // console.log(res.data.token,"@@@@@@")
+            console.log(res.data,"@@@@@@")
             setToken(res.data.token)
             this.token = res.data.token
+              const {username} = res.data.userInfo
+              storage.setItem('username',username)
             resolve()
           }).catch(error => {
             reject(error)

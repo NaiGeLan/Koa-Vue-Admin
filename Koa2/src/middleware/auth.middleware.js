@@ -14,6 +14,7 @@ const auth = async (ctx,next)=>{
     switch(error.name){
         case 'TokenExpiredError':
             // console.error('token已过期',error);
+            ctx.status = 401
             ctx.body = util.fail(util.CODE.AUTH_ERROR,'token过期')
             // ctx.body = {
             //     code: '10101',
@@ -23,6 +24,7 @@ const auth = async (ctx,next)=>{
             return
         case 'jsonWebTokenError':
             // console.error('无效token',error);
+            ctx.status = 401
             ctx.body = util.fail(util.CODE.AUTH_ERROR,'无效的token')
             // ctx.body = {
             //     code: '10102',
