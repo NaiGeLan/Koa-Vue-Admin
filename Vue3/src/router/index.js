@@ -2,22 +2,12 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [
     {
-        name:'home',
+        name:'welcome',
         path:'/',
-        component:() => import('../components/Home.vue'),
         meta:{
-            title:'首页'
+            title:'欢迎'
         },
-        children:[
-            {
-                name:'welcome',
-                path:'/welcome',
-                meta:{
-                    title:'欢迎'
-                },
-                component:() => import('../components/Welcome.vue')
-            },
-        ]
+        component:() => import('../views/Home.vue')
     },
     {
         name:'login',

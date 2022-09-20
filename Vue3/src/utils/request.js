@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { ElNotification , ElMessageBox, ElMessage, ElLoading } from 'element-plus'
 import { tansParams } from './common'
+import { getToken } from './auth'
 axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 
 const service = axios.create({
@@ -11,6 +12,11 @@ const service = axios.create({
 })
 
 service.interceptors.request.use(config => {
+    // 是否需要设置 token
+    const isToken = (config.headers || {}).isToken === false
+    if (getToken() && !isToken) {
+        config.headers['Authorization'] = 'Bearer ' + getToken() // 让每个请求携带自定义token 请根据实际情况自行修改
+    }
     // get请求映射params参数
   if (config.method === 'get' && config.params) {
     let url = config.url + '?' + tansParams(config.params);
@@ -32,6 +38,7 @@ service.interceptors.request.use(config => {
 })
 
 service.interceptors.response.use(res => {
+    console.log(res)
     const code = res.data.code || 200
     const msg = res.data.msg
      if (code === 500) {

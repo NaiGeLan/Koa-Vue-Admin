@@ -1,26 +1,25 @@
-import { loginApi } from '../../api/login'
+import { loginApi, getInfoApi } from '../../api/user.js'
 import { getToken, setToken, removeToken } from '../../utils/auth'
+// import storage from '../../utils/storage'
 import { defineStore } from 'pinia'
 const useUserStore = defineStore(
   'user',
   {
     state: () => ({
       token: getToken(),
-      name: '',
-      avatar: '',
+      username: '',
       roles: [],
-      permissions: []
+      deptId: [],
+      roleList: []
     }),
     actions: {
       // 登录
       login(userInfo) {
         const { username, password } = userInfo
-        // const username = userInfo.username
-        // const password = userInfo.password
-        console.log(username,password,"@@@@@@@@")
+        // console.log(username,password,"@@@@@@@@")
         return new Promise((resolve, reject) => {
             loginApi(username, password).then(res => {
-            console.log(res.data.token,"@@@@@@")
+            // console.log(res.data.token,"@@@@@@")
             setToken(res.data.token)
             this.token = res.data.token
             resolve()
@@ -32,19 +31,10 @@ const useUserStore = defineStore(
       // 获取用户信息
       getInfo() {
         return new Promise((resolve, reject) => {
-          getInfo().then(res => {
-            const user = res.user
-            const avatar = (user.avatar == "" || user.avatar == null) ? defAva : import.meta.env.VITE_APP_BASE_API + user.avatar;
-
-            if (res.roles && res.roles.length > 0) { // 验证返回的roles是否是一个非空数组
-              this.roles = res.roles
-              this.permissions = res.permissions
-            } else {
-              this.roles = ['ROLE_DEFAULT']
-            }
-            this.name = user.userName
-            this.avatar = avatar;
-            resolve(res)
+          getInfoApi().then(res => {
+            console.log(res)
+            const user = res.data
+            resolve(user)
           }).catch(error => {
             reject(error)
           })

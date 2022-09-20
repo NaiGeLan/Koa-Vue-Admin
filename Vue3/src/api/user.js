@@ -2,7 +2,8 @@
 import request from '../utils/request'
 // import {post} from "../utils/request"
 const Api = {
-    loginApi : '/users/login'
+    loginApi : '/users/login',
+    getInfoApi : '/users/getInfo'
 }
 // export const login = (params) => {
 //     return request({
@@ -25,7 +26,7 @@ export function loginApi(username, password) {
       data: data
     })
   }
-  
+
 //   // 注册方法
 //   export function register(data) {
 //     return request({
@@ -37,15 +38,15 @@ export function loginApi(username, password) {
 //       data: data
 //     })
 //   }
-  
+
 //   // 获取用户详细信息
-//   export function getInfo() {
-//     return request({
-//       url: '/getInfo',
-//       method: 'get'
-//     })
-//   }
-  
+  export function getInfoApi() {
+    return request({
+      url: Api.getInfoApi,
+      method: 'get'
+    })
+  }
+
 //   // 退出方法
 //   export function logout() {
 //     return request({
@@ -53,4 +54,3 @@ export function loginApi(username, password) {
 //       method: 'post'
 //     })
 //   }
-  

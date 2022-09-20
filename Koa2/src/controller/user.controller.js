@@ -30,11 +30,22 @@ class UserController {
     try {
       // 从返回对象结果中剔除password属性，其他属性放在res对象
       const {password,...res} = await getUserInfo({username})
-      const data = {token: jwt.sign(res,JWT_SECRET,{expiresIn:'1d'})}
+      const info = {...res}._doc
+      console.log(info)
+      const userInfo = {username:info.username,deptId:info.deptId,state:info.state,role:info.role,roleList:info.roleList}
+      console.log(userInfo)
+      const data = {token: jwt.sign(res,JWT_SECRET,{expiresIn:'1d'}),userInfo}
       ctx.body = util.success(util.CODE.SUCCESS,'用户登录成功',data)
     }catch(err){
       ctx.body = util.fail(util.CODE.BUSINESS_ERROR,'用户登录失败',err)
     }
+  }
+  //获取用户信息
+  async getUserInfo(ctx){
+    const info = ctx.state.user._doc
+    console.log(info)
+    const userInfo = {username:info.username,deptId:info.deptId,state:info.state,role:info.role,roleList:info.roleList}
+    ctx.body = util.success(util.CODE.SUCCESS,'获取用户信息成功',userInfo)
   }
 }
 

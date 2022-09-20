@@ -1,18 +1,25 @@
 
 <script lang="ts" setup>
   import { reactive } from 'vue'
-  // import {login} from "../api/login.js";
+  import { useRouter } from 'vue-router'
   import useUserStore from '../store/modules/user';
+  const router = useRouter();
   const userStore = useUserStore()
   const form = reactive({
     username:'',
     password:'',
   })
-  
+  const saveUserInfo = (info) => {
+    userStore.username = info.username
+    // console.log(userStore.username)
+  }
   const onSubmit = async () => {
-      userStore.login(form)
-    // const res = await login(form)
-    // console.log(res)
+      await userStore.login(form).then(() => {
+        router.push({ path:  "/" });
+      })
+      const info = await userStore.getInfo()
+      console.log(info)
+      saveUserInfo(info)
   }
   const rules = reactive({
     username: [
@@ -38,7 +45,7 @@
         </el-form-item>
       </el-form>
     </div>
-   
+
   </div>
-  
+
 </template>

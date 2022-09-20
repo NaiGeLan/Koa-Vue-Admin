@@ -44,7 +44,7 @@ const verifyLogin = async (ctx,next)=>{
         const res = await getUserInfo({username})
         if(!res){
             // console.error('用户名不存在',{username});
-            ctx.status = 409
+            // ctx.status = 200
             // ctx.body = {
             //     code: "10004",
             //     message: "用户不存在",
@@ -55,7 +55,7 @@ const verifyLogin = async (ctx,next)=>{
         }
         //密码是否匹配（不匹配报错）
         if(!bcrypt.compareSync(password,res.password)){
-            ctx.status = 500
+            // ctx.status = 200
             ctx.body = util.fail(util.CODE.USER_ACCOUNT_ERROR,'密码错误')
             // ctx.body = {
             //     code: "10006",
