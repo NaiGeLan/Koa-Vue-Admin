@@ -38,7 +38,7 @@ service.interceptors.request.use(config => {
 })
 
 service.interceptors.response.use(res => {
-    console.log(res)
+    console.log(res.data.code)
     const code = res.data.code || 200
     const msg = res.data.msg
      if (code === 500) {
@@ -52,7 +52,12 @@ service.interceptors.response.use(res => {
           title: msg
         })
         return Promise.reject('error')
-      } else {
+      } else if(code === 200){
+         ElMessage({
+             message: msg,
+             type: 'success',
+             duration: 2 * 1000
+         })
         return  Promise.resolve(res.data)
       }
 }, error => {

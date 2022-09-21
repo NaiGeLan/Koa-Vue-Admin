@@ -1,6 +1,5 @@
 import { loginApi, getInfoApi } from '../../api/user.js'
 import { getToken, setToken, removeToken } from '../../utils/auth'
-// import storage from '../../utils/storage'
 import { defineStore } from 'pinia'
 import storage from "../../utils/storage.js";
 const useUserStore = defineStore(
@@ -17,17 +16,15 @@ const useUserStore = defineStore(
       // 登录
       login(userInfo) {
         const { username, password } = userInfo
-        // console.log(username,password,"@@@@@@@@")
         return new Promise((resolve, reject) => {
             loginApi(username, password).then(res => {
-            console.log(res.data,"@@@@@@")
-            setToken(res.data.token)
-            this.token = res.data.token
+              setToken(res.data.token)
+              this.token = res.data.token
               const {username} = res.data.userInfo
               storage.setItem('username',username)
-            resolve()
+              resolve()
           }).catch(error => {
-            reject(error)
+              reject(error)
           })
         })
       },
