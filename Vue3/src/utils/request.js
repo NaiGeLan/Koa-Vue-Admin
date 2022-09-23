@@ -2,6 +2,7 @@ import axios from 'axios'
 import { ElNotification , ElMessageBox, ElMessage, ElLoading } from 'element-plus'
 import { tansParams } from './common'
 import { getToken } from './auth'
+import router from '../router/index'
 axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 
 const service = axios.create({
@@ -38,28 +39,34 @@ service.interceptors.request.use(config => {
 })
 
 service.interceptors.response.use(res => {
-    console.log(res.data.code)
+    if (typeof res.data !== 'object') {
+      ElMessage.error('服务端异常！')
+      return Promise.reject(res)
+    }
+    // console.log(res.data.code)
     const code = res.data.code || 200
     const msg = res.data.msg
-     if (code === 500) {
-        ElMessage({
-          message: msg,
-          type: 'error'
+      if(code === 30001){
+        console.log('跳转登陆');
+        router.push({ path: '/login' })
+        ElNotification.error({
+          title: msg
         })
-        return Promise.reject(new Error(msg))
-      } else if (code !== 200) {
+      }
+     else if(code === 200){
+        //  ElMessage({
+        //      message: msg,
+        //      type: 'success',
+        //      duration: 2 * 1000
+        //  })
+        return  Promise.resolve(res.data)
+      } 
+      else{
         ElNotification.error({
           title: msg
         })
         return Promise.reject('error')
-      } else if(code === 200){
-         ElMessage({
-             message: msg,
-             type: 'success',
-             duration: 2 * 1000
-         })
-        return  Promise.resolve(res.data)
-      }
+      } 
 }, error => {
     console.log('err' + error)
     let { message } = error;

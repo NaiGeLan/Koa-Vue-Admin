@@ -432,3 +432,135 @@
   userInfo: { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
 }
 [2022-09-21T09:04:01.524] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T10:27:26.929] [INFO] info - {
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsiZGVwdElkIjoiaW5pdCIsInN0YXRlIjoiaW5pdCIsInJvbGUiOiJpbml0Iiwicm9sZUxpc3QiOiJpbml0IiwiY3JlYXRlVGltZSI6ImluaXQiLCJsYXN0TG9naW5UaW1lIjoiaW5pdCIsIl9pZCI6ImluaXQiLCJ1c2VybmFtZSI6ImluaXQiLCJwYXNzd29yZCI6ImluaXQiLCJfX3YiOiJpbml0In0sInN0YXRlcyI6eyJkZWZhdWx0Ijp7fSwiaW5pdCI6eyJfaWQiOnRydWUsInVzZXJuYW1lIjp0cnVlLCJwYXNzd29yZCI6dHJ1ZSwiZGVwdElkIjp0cnVlLCJzdGF0ZSI6dHJ1ZSwicm9sZSI6dHJ1ZSwicm9sZUxpc3QiOnRydWUsImNyZWF0ZVRpbWUiOnRydWUsImxhc3RMb2dpblRpbWUiOnRydWUsIl9fdiI6dHJ1ZX19fSwic2tpcElkIjp0cnVlfSwiJGlzTmV3IjpmYWxzZSwiX2RvYyI6eyJfaWQiOiI2MzI4MTRjMDk5NzA5Y2NjZTFkY2FjMzAiLCJ1c2VybmFtZSI6InpweSIsInBhc3N3b3JkIjoiJDJhJDEwJHQ1QnN1SUxXM2dyLkY2SFAzZ2RjbmU4Z3FvdnE1b0drRjJPU2VHc243WVNUMjhlTkRVTlZLIiwiZGVwdElkIjpbXSwic3RhdGUiOjEsInJvbGUiOjEsInJvbGVMaXN0IjpbXSwiY3JlYXRlVGltZSI6IjIwMjItMDktMTlUMDc6MDQ6MzQuMDYxWiIsImxhc3RMb2dpblRpbWUiOiIyMDIyLTA5LTE5VDA3OjA0OjM0LjA2MVoiLCJfX3YiOjB9LCJpYXQiOjE2NjM4MTM2NDYsImV4cCI6MTY2MzkwMDA0Nn0.Zmi7PE7J270G1sVb_lEilzixvNoXeh8RFboBIQbeJ7E',
+  userInfo: { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+}
+[2022-09-22T10:37:21.393] [INFO] info - {
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsiZGVwdElkIjoiaW5pdCIsInN0YXRlIjoiaW5pdCIsInJvbGUiOiJpbml0Iiwicm9sZUxpc3QiOiJpbml0IiwiY3JlYXRlVGltZSI6ImluaXQiLCJsYXN0TG9naW5UaW1lIjoiaW5pdCIsIl9pZCI6ImluaXQiLCJ1c2VybmFtZSI6ImluaXQiLCJwYXNzd29yZCI6ImluaXQiLCJfX3YiOiJpbml0In0sInN0YXRlcyI6eyJkZWZhdWx0Ijp7fSwiaW5pdCI6eyJfaWQiOnRydWUsInVzZXJuYW1lIjp0cnVlLCJwYXNzd29yZCI6dHJ1ZSwiZGVwdElkIjp0cnVlLCJzdGF0ZSI6dHJ1ZSwicm9sZSI6dHJ1ZSwicm9sZUxpc3QiOnRydWUsImNyZWF0ZVRpbWUiOnRydWUsImxhc3RMb2dpblRpbWUiOnRydWUsIl9fdiI6dHJ1ZX19fSwic2tpcElkIjp0cnVlfSwiJGlzTmV3IjpmYWxzZSwiX2RvYyI6eyJfaWQiOiI2MzI4MTRjMDk5NzA5Y2NjZTFkY2FjMzAiLCJ1c2VybmFtZSI6InpweSIsInBhc3N3b3JkIjoiJDJhJDEwJHQ1QnN1SUxXM2dyLkY2SFAzZ2RjbmU4Z3FvdnE1b0drRjJPU2VHc243WVNUMjhlTkRVTlZLIiwiZGVwdElkIjpbXSwic3RhdGUiOjEsInJvbGUiOjEsInJvbGVMaXN0IjpbXSwiY3JlYXRlVGltZSI6IjIwMjItMDktMTlUMDc6MDQ6MzQuMDYxWiIsImxhc3RMb2dpblRpbWUiOiIyMDIyLTA5LTE5VDA3OjA0OjM0LjA2MVoiLCJfX3YiOjB9LCJpYXQiOjE2NjM4MTQyNDEsImV4cCI6MTY2MzkwMDY0MX0.Tf4oDMl14lCFGLJ8sETi9qGCw__Hh5cX4-1x0fiYLzI',
+  userInfo: { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+}
+[2022-09-22T11:01:34.135] [INFO] info - {
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsiZGVwdElkIjoiaW5pdCIsInN0YXRlIjoiaW5pdCIsInJvbGUiOiJpbml0Iiwicm9sZUxpc3QiOiJpbml0IiwiY3JlYXRlVGltZSI6ImluaXQiLCJsYXN0TG9naW5UaW1lIjoiaW5pdCIsIl9pZCI6ImluaXQiLCJ1c2VybmFtZSI6ImluaXQiLCJwYXNzd29yZCI6ImluaXQiLCJfX3YiOiJpbml0In0sInN0YXRlcyI6eyJkZWZhdWx0Ijp7fSwiaW5pdCI6eyJfaWQiOnRydWUsInVzZXJuYW1lIjp0cnVlLCJwYXNzd29yZCI6dHJ1ZSwiZGVwdElkIjp0cnVlLCJzdGF0ZSI6dHJ1ZSwicm9sZSI6dHJ1ZSwicm9sZUxpc3QiOnRydWUsImNyZWF0ZVRpbWUiOnRydWUsImxhc3RMb2dpblRpbWUiOnRydWUsIl9fdiI6dHJ1ZX19fSwic2tpcElkIjp0cnVlfSwiJGlzTmV3IjpmYWxzZSwiX2RvYyI6eyJfaWQiOiI2MzI4MTRjMDk5NzA5Y2NjZTFkY2FjMzAiLCJ1c2VybmFtZSI6InpweSIsInBhc3N3b3JkIjoiJDJhJDEwJHQ1QnN1SUxXM2dyLkY2SFAzZ2RjbmU4Z3FvdnE1b0drRjJPU2VHc243WVNUMjhlTkRVTlZLIiwiZGVwdElkIjpbXSwic3RhdGUiOjEsInJvbGUiOjEsInJvbGVMaXN0IjpbXSwiY3JlYXRlVGltZSI6IjIwMjItMDktMTlUMDc6MDQ6MzQuMDYxWiIsImxhc3RMb2dpblRpbWUiOiIyMDIyLTA5LTE5VDA3OjA0OjM0LjA2MVoiLCJfX3YiOjB9LCJpYXQiOjE2NjM4MTU2OTQsImV4cCI6MTY2MzkwMjA5NH0.1Fq2vcPDe0OfYZOnK5UQ0Rx2SKvPv56UWiif-jPXM9w',
+  userInfo: { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+}
+[2022-09-22T11:01:34.248] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:39:14.708] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:39:14.710] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:39:28.668] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:39:28.683] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:39:31.889] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:39:47.268] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:39:47.269] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:39:54.695] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:39:54.697] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:40:14.057] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:40:14.058] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:40:19.880] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:40:19.884] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:40:58.583] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:41:32.148] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:41:32.150] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:42:22.597] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:42:22.610] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:44:00.624] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:44:00.627] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:44:12.329] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:44:20.994] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:44:34.748] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:44:34.761] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:45:32.798] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:45:32.799] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:45:45.696] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:45:45.703] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:46:26.164] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:46:56.747] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:47:29.428] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:47:30.452] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:47:31.712] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:47:51.149] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:48:08.454] [INFO] info - {
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsiZGVwdElkIjoiaW5pdCIsInN0YXRlIjoiaW5pdCIsInJvbGUiOiJpbml0Iiwicm9sZUxpc3QiOiJpbml0IiwiY3JlYXRlVGltZSI6ImluaXQiLCJsYXN0TG9naW5UaW1lIjoiaW5pdCIsIl9pZCI6ImluaXQiLCJ1c2VybmFtZSI6ImluaXQiLCJwYXNzd29yZCI6ImluaXQiLCJfX3YiOiJpbml0In0sInN0YXRlcyI6eyJkZWZhdWx0Ijp7fSwiaW5pdCI6eyJfaWQiOnRydWUsInVzZXJuYW1lIjp0cnVlLCJwYXNzd29yZCI6dHJ1ZSwiZGVwdElkIjp0cnVlLCJzdGF0ZSI6dHJ1ZSwicm9sZSI6dHJ1ZSwicm9sZUxpc3QiOnRydWUsImNyZWF0ZVRpbWUiOnRydWUsImxhc3RMb2dpblRpbWUiOnRydWUsIl9fdiI6dHJ1ZX19fSwic2tpcElkIjp0cnVlfSwiJGlzTmV3IjpmYWxzZSwiX2RvYyI6eyJfaWQiOiI2MzI4MTRjMDk5NzA5Y2NjZTFkY2FjMzAiLCJ1c2VybmFtZSI6InpweSIsInBhc3N3b3JkIjoiJDJhJDEwJHQ1QnN1SUxXM2dyLkY2SFAzZ2RjbmU4Z3FvdnE1b0drRjJPU2VHc243WVNUMjhlTkRVTlZLIiwiZGVwdElkIjpbXSwic3RhdGUiOjEsInJvbGUiOjEsInJvbGVMaXN0IjpbXSwiY3JlYXRlVGltZSI6IjIwMjItMDktMTlUMDc6MDQ6MzQuMDYxWiIsImxhc3RMb2dpblRpbWUiOiIyMDIyLTA5LTE5VDA3OjA0OjM0LjA2MVoiLCJfX3YiOjB9LCJpYXQiOjE2NjM4MjIwODgsImV4cCI6MTY2MzkwODQ4OH0.nE1IXDocwSBzfDoaFYV6sYC7TV0Bwxx4D5mbg1iG2_Q',
+  userInfo: { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+}
+[2022-09-22T12:48:08.534] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:48:08.535] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:48:25.841] [INFO] info - {
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsiZGVwdElkIjoiaW5pdCIsInN0YXRlIjoiaW5pdCIsInJvbGUiOiJpbml0Iiwicm9sZUxpc3QiOiJpbml0IiwiY3JlYXRlVGltZSI6ImluaXQiLCJsYXN0TG9naW5UaW1lIjoiaW5pdCIsIl9pZCI6ImluaXQiLCJ1c2VybmFtZSI6ImluaXQiLCJwYXNzd29yZCI6ImluaXQiLCJfX3YiOiJpbml0In0sInN0YXRlcyI6eyJkZWZhdWx0Ijp7fSwiaW5pdCI6eyJfaWQiOnRydWUsInVzZXJuYW1lIjp0cnVlLCJwYXNzd29yZCI6dHJ1ZSwiZGVwdElkIjp0cnVlLCJzdGF0ZSI6dHJ1ZSwicm9sZSI6dHJ1ZSwicm9sZUxpc3QiOnRydWUsImNyZWF0ZVRpbWUiOnRydWUsImxhc3RMb2dpblRpbWUiOnRydWUsIl9fdiI6dHJ1ZX19fSwic2tpcElkIjp0cnVlfSwiJGlzTmV3IjpmYWxzZSwiX2RvYyI6eyJfaWQiOiI2MzI4MTRjMDk5NzA5Y2NjZTFkY2FjMzAiLCJ1c2VybmFtZSI6InpweSIsInBhc3N3b3JkIjoiJDJhJDEwJHQ1QnN1SUxXM2dyLkY2SFAzZ2RjbmU4Z3FvdnE1b0drRjJPU2VHc243WVNUMjhlTkRVTlZLIiwiZGVwdElkIjpbXSwic3RhdGUiOjEsInJvbGUiOjEsInJvbGVMaXN0IjpbXSwiY3JlYXRlVGltZSI6IjIwMjItMDktMTlUMDc6MDQ6MzQuMDYxWiIsImxhc3RMb2dpblRpbWUiOiIyMDIyLTA5LTE5VDA3OjA0OjM0LjA2MVoiLCJfX3YiOjB9LCJpYXQiOjE2NjM4MjIxMDUsImV4cCI6MTY2MzkwODUwNX0.sFmRDI02uThAb3MB8r5O_Us8Sy81IxyYw6OX2NaDOqU',
+  userInfo: { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+}
+[2022-09-22T12:48:46.487] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:48:49.674] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:48:56.492] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:49:00.604] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:49:18.554] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:49:18.561] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:49:21.061] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:49:30.057] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:49:37.352] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:50:15.220] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:50:58.556] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:52:32.800] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:52:53.356] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:52:53.359] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:53:24.313] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T12:53:28.211] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T13:00:20.321] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T13:00:43.047] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T13:00:55.857] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T13:02:27.762] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T13:02:45.054] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T13:02:51.341] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T13:03:32.020] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T13:03:35.558] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T13:03:57.725] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T13:04:18.432] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T13:04:33.227] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T13:06:33.763] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T13:07:00.189] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T15:09:12.727] [INFO] info - { username: 'zpy', deptId: [], state: 1, role: 1, roleList: [] }
+[2022-09-22T16:48:44.216] [INFO] info - {
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {},
+      states: [Object],
+      map: [Function (anonymous)]
+    },
+    op: null,
+    saving: null,
+    '$versionError': null,
+    saveOptions: null,
+    validating: null,
+    validationError: undefined,
+    cachedRequired: {},
+    backup: { activePaths: [Object], validationError: null, errors: undefined },
+    inserting: true,
+    savedState: {}
+  },
+  _doc: {
+    menuType: 1,
+    menuName: '测试菜单2',
+    parentId: [],
+    createTime: 2022-09-22T08:48:41.913Z,
+    updateTime: 2022-09-22T08:48:41.913Z,
+    _id: new ObjectId("632c216cf14d3c0bcc4743f1"),
+    __v: 0
+  },
+  '$errors': undefined,
+  '$isNew': false
+}
+[2022-09-22T16:49:10.852] [INFO] info - {
+  menuType: 1,
+  menuName: '测试菜单2',
+  parentId: [],
+  createTime: 2022-09-22T08:49:08.524Z,
+  updateTime: 2022-09-22T08:49:08.524Z
+}
+[2022-09-22T16:57:00.792] [INFO] info - {
+  menuType: 1,
+  menuName: '测试菜单23333',
+  parentId: [],
+  createTime: 2022-09-22T08:55:53.591Z,
+  updateTime: 2022-09-22T08:55:53.591Z
+}
+[2022-09-22T17:00:56.454] [INFO] info - true
