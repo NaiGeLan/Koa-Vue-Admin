@@ -19,18 +19,12 @@ service.interceptors.request.use(config => {
         config.headers['Authorization'] = 'Bearer ' + getToken() // 让每个请求携带自定义token 请根据实际情况自行修改
     }
     // get请求映射params参数
+    console.log(config)
   if (config.method === 'get' && config.params) {
     let url = config.url + '?' + tansParams(config.params);
     url = url.slice(0, -1);
     config.params = {};
     config.url = url;
-  }
-  if (config.method === 'post' || config.method === 'put') {
-    const requestObj = {
-      url: config.url,
-      data: typeof config.data === 'object' ? JSON.stringify(config.data) : config.data,
-      time: new Date().getTime()
-    }
   }
   return config
 }, error => {
@@ -54,19 +48,14 @@ service.interceptors.response.use(res => {
         })
       }
      else if(code === 200){
-        //  ElMessage({
-        //      message: msg,
-        //      type: 'success',
-        //      duration: 2 * 1000
-        //  })
         return  Promise.resolve(res.data)
-      } 
+      }
       else{
         ElNotification.error({
           title: msg
         })
         return Promise.reject('error')
-      } 
+      }
 }, error => {
     console.log('err' + error)
     let { message } = error;

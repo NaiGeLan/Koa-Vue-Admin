@@ -5,7 +5,7 @@ var log4js = require('../utils/log4j.utils');
 const userRouter = require('../router/user.route')
 const messageRouter = require('../router/message.route')
 const menuRouter = require('../router/menu.route')
-app.use(koaBody())
+app.use(koaBody({strict:false}))
 const cors = require('@koa/cors');
 app.use(cors()); //使用cors中间件
 app.use(userRouter.routes())
