@@ -2,77 +2,74 @@
 import Pagination from './Pagination.vue'
 const props = defineProps(
     {
-      columnsData:{
+      columnsData:{//表头数据
         type:Array,
         required:true
       },
-      listData: {
+      listData: {//表格内容数据
         type: Array,
         required: true
       },
-      showIndexColumn: {
+      showIndexColumn: {//是否展示序列号列
         type: Boolean,
         default: false
       },
-      showSelectColumn: {
+      showSelectColumn: {//是否有多选列
         type: Boolean,
         default: true
       },
-      slotList:{
+      slotList:{ //插槽列
         type:Array
       },
-      page: {
+      page: { //分页器数据
         type: Object,
         default: () => ({ currentPage: 0, pageSize: 10,total:0 })
       },
-
-      showFooter: {
+      showFooter: { //是否展示底部分页
         type: Boolean,
         default: true
       },
-      isOperation:{
+      isOperation:{ //是否展示操作列
         default:true
       },
-      operation:{
-        data:{
-          label:''
-        },
-        width:{
-          default:'100',
-          required:false
-        },
-        label:{
-          default:'操作'
-        }
+      operation:{ //操作列数据
+        default:() => ({
+          width: '100',//宽度
+          label:'操作',//标签
+          isDownload:false,//是否展示下载
+          isResetPassword:false,//是否展示重置密码
+          isEdit:true,//是否展示编辑
+          isDelete:true,//是否展示删除
+          deleteText:'您确定要删除么'
+        })
       }
     }
 )
 const emit = defineEmits(['selectionChange', 'handleSizeChange','handleCurrentChange','handleEdit','handleDelete','handleSelectionChange'])
-const handleSelectionChange = (value) => {
-  // console.log(value)
+const handleSelectionChange = (value) => {//多选监听
   emit('handleSelectionChange', value)
 }
-const handleCurrentChange = (val) => {
+const handleCurrentChange = (val) => { //页码变化
   console.log(val)
   emit('handleCurrentChange', val)
 }
-const handleSizeChange = (val) => {
+const handleSizeChange = (val) => { //页面数据量变化
   emit('handleSizeChange',  val )
 }
-const handleEdit = (val) => {
+const handleEdit = (val) => { //点击编辑
   console.log(val)
   emit('handleEdit',val)
 }
-const handleDelete = (val) => {
+const handleDelete = (val) => {//点击删除
   emit('handleDelete',val)
 }
-const handleDownload = (val) => {
+const handleDownload = (val) => {//点击下载
   emit('handleDownload',val)
 }
-const handleResetPassword = (val) => {
+const handleResetPassword = (val) => {//点击重置密码
   emit('handleResetPassword',val)
 }
-const handleSlot = (val) => {
+const handleSlot = (val) => { //插槽操作
   console.log(val)
 }
 </script>
@@ -107,7 +104,7 @@ const handleSlot = (val) => {
             cancel-button-text="取消"
             @confirm="handleDelete(scope.row)"
             icon-color="#626AEF"
-            title="确定要删除该用户么"
+            :title="props.operation.deleteText"
             v-if="props.operation.isDelete"
         >
           <template #reference>

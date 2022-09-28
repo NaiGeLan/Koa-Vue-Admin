@@ -5,6 +5,7 @@ import {  ElMessage,ElLoading } from 'element-plus'
 import HandleUser from '../components/User/handleUser.vue'
 import FilterTable from '../components/common/FilterTable.vue'
 import Table from '../components/common/Table.vue'
+import Operation from '../components/common/Operation.vue'
 //筛选框组件数据
 const  filterData = reactive({
   input:[
@@ -30,7 +31,9 @@ const  filterData = reactive({
         label:'所有'
       }]
     }
-  ]
+  ],
+  isTime:true,
+  timeLabel:'时间：'
 })
 const clickAdd = () => {
   handleUserTitle.value = '新增用户'
@@ -160,6 +163,7 @@ const operationList = reactive({
   isDelete:true,//是否有删除
   isDownload:true,//是否有下载
   isResetPassword:true,//是否重置密码
+  deleteText:'您确定要删除么'
 })
 //表头数据
 const columns = [
@@ -197,6 +201,7 @@ const slotList = [
 <template>
   <!--    上方筛选框-->
   <FilterTable :filterData="filterData" @getList="getList" @handleReset="handleReset"></FilterTable>
+  <Operation @handleDelete=""></Operation>
   <!--  下方表格-->
   <Table :listData="tableData"
          :columnsData="columns"

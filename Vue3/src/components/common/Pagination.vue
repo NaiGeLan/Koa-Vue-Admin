@@ -1,3 +1,4 @@
+<!--分页器组件-->
 <template>
   <div>
     <el-pagination

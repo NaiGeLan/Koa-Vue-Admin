@@ -37,7 +37,6 @@ service.interceptors.response.use(res => {
       ElMessage.error('服务端异常！')
       return Promise.reject(res)
     }
-    // console.log(res.data.code)
     const code = res.data.code || 200
     const msg = res.data.msg
       if(code === 30001){
