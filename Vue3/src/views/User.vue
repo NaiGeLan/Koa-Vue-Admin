@@ -5,6 +5,7 @@ import {  ElMessage,ElLoading } from 'element-plus'
 import HandleUser from '../components/User/handleUser.vue'
 import FilterTable from '../components/common/FilterTable.vue'
 import Table from '../components/common/Table.vue'
+//筛选框组件数据
 const  filterData = reactive({
   input:[
     {
@@ -59,7 +60,9 @@ const clickClose = () => {
 const handleUserTitle = ref()
 const handleUserMethod = ref()
 const handleUserData = ref({})
-let tableData = ref([])
+//表格数据
+const tableData = ref([])
+//分页器数据
 let pager = ref({
   total:0,
   pageNum: 1,
@@ -68,13 +71,16 @@ let pager = ref({
 const DialogVisible = reactive({
   handleUserVisible:false
 })
-let mutiId
+//批量选中数据
+const mutiId = ref([])
 const handleSelectionChange = (val) => {
-  mutiId = val.map((item) => {
+  console.log(val)
+  mutiId.value = val.map((item) => {
     return item._id
   })
-  console.log(mutiId)
+  console.log(mutiId.value)
 }
+//编辑数据
 const handleEdit = async (params) => {
   console.log(params)
   const {username,userEmail,mobile,state,role,id} = params
@@ -86,6 +92,7 @@ const handleEdit = async (params) => {
     await getList()
   }
 }
+//新增数据
 const handleAdd = async (params) => {
   console.log(params)
   const {username,password,userEmail,mobile,state,role} = params
@@ -97,6 +104,7 @@ const handleAdd = async (params) => {
   }
   console.log(res)
 }
+//删除单条数据
 const handleDelete = async (data) => {
   console.log(data._id)
   const res = await deleteUserApi(data._id)
@@ -106,11 +114,13 @@ const handleDelete = async (data) => {
     await getList()
   }
 }
+//批量删除
 const handleDeleteMany = async () => {
   console.log(mutiId)
   const res = await deleteMany(mutiId)
   console.log(res)
 }
+//获取表格数据
 const getList = async (selectData) => {
   let getListInstance = ElLoading.service({ text: "正在获取用户信息，请稍候", background: "rgba(0, 0, 0, 0.7)", })
   const params = {...selectData,pageNum:pager.value.pageNum,pageSize:pager.value.pageSize}
@@ -119,18 +129,22 @@ const getList = async (selectData) => {
     getListInstance.close()
     pager.value.total = list.data.page.total
     tableData.value = list.data.list
+    console.log(tableData.value)
   }
 }
+//单页数据量变化
 const handleSizeChange = async (val) => {
   console.log(val)
   pager.value.pageSize = val
   await getList()
 }
+//页码变化
 const handleCurrentChange = async (val) => {
   console.log(val)
   pager.value.pageNum = val
   await getList()
 }
+//重置页面
 const handleReset = async (selectData) => {
   pager.value.pageSize = 10
   pager.value.pageNum = 1
@@ -147,6 +161,7 @@ const operationList = reactive({
   isDownload:true,//是否有下载
   isResetPassword:true,//是否重置密码
 })
+//表头数据
 const columns = [
   {
     prop:'username',
@@ -170,21 +185,29 @@ const columns = [
     label:'用户状态'
   },
 ]
+//表格插槽
+const slotList = [
+  {
+    prop:'_id',
+    label:'下载',
+  },
+]
 </script>
 
 <template>
   <!--    上方筛选框-->
   <FilterTable :filterData="filterData" @getList="getList" @handleReset="handleReset"></FilterTable>
-<!--  下方表格-->
+  <!--  下方表格-->
   <Table :listData="tableData"
          :columnsData="columns"
-         :page="{pageNum:pager.pageNum,pageSize:pager.pageSize,total:pager.total}"
+         :page="{currentPage:pager.pageNum,pageSize:pager.pageSize,total:pager.total}"
          :operation="operationList"
          @handleSelectionChange="handleSelectionChange"
          @handleSizeChange="handleSizeChange"
          @handleCurrentChange="handleCurrentChange"
          @handleEdit="clickEdit"
          @handleDelete="handleDelete"
+         :slotList="slotList"
   >
   </Table>
     <HandleUser :handleUserVisible="DialogVisible.handleUserVisible" :method="handleUserMethod" :title="handleUserTitle" @handleCancel="clickClose" @handleAdd="handleAdd" @handleEdit="handleEdit" :data="handleUserData"></HandleUser>

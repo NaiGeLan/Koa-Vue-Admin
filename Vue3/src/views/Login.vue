@@ -1,5 +1,5 @@
 
-<script lang="ts" setup>
+<script  setup>
   import { reactive } from 'vue'
   import { useRouter } from 'vue-router'
   import useUserStore from '../store/modules/user';
